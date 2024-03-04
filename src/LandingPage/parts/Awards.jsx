@@ -1,8 +1,8 @@
-import { Stack, Typography } from '@mui/material'
-import React from 'react'
-import award1 from "../../assets/award1.svg"
-import review from "../../assets/review1.svg"
-import "./Features.css"
+import { Stack, Typography } from "@mui/material";
+import React from "react";
+import award1 from "../../assets/award1.svg";
+import review from "../../assets/review1.svg";
+import "./Features.css";
 const Awards = () => {
   return (
     <Stack
@@ -32,7 +32,7 @@ const Awards = () => {
           alignItems={{ xl: "none", xs: "center" }}
         >
           <Stack
-            width={{ xl: "35%", xs: "92%" }}
+            width={{ xl: "35%", xs: "75%" }}
             boxShadow={"1px 0px 2px 3px #F1F1F1"}
           >
             <Typography
@@ -45,19 +45,80 @@ const Awards = () => {
               Awards
             </Typography>
             <Stack
+              gap={3}
               direction={"row"}
               flexWrap={"wrap"}
               justifyContent={"center"}
             >
-              <img src={award1} alt="" className="Image-size" />
-              <img src={award1} alt="" className="Image-size" />
-              <img src={award1} alt="" className="Image-size" />
-              <img src={award1} alt="" className="Image-size" />
-              <img src={award1} alt="" className="Image-size" />
+              <Stack
+                sx={{
+                  width: "27%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={award1}
+                  alt=""
+                  // className="Image-size"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "27%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={award1}
+                  alt=""
+                  // className="Image-size"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "27%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={award1}
+                  alt=""
+                  // className="Image-size"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "27%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={award1}
+                  alt=""
+                  // className="Image-size"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "27%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={award1}
+                  alt=""
+                  // className="Image-size"
+                />
+              </Stack>
             </Stack>
           </Stack>
           <Stack
-            width={{ xl: "40%", xs: "92%" }}
+            width={{ xl: "35%", xs: "75%" }}
             boxShadow={"1px 0px 2px 3px #F1F1F1"}
           >
             <Typography
@@ -70,20 +131,70 @@ const Awards = () => {
               Reviews
             </Typography>
             <Stack
+              gap={2.5}
+              padding={"9px 0"}
               direction={"row"}
               flexWrap={"wrap"}
               justifyContent={"center"}
             >
-              <img src={review} alt="" className="Image-size2" />
-              <img src={review} alt="" className="Image-size2" />
-              <img src={review} alt="" className="Image-size2" />
-              <img src={review} alt="" className="Image-size2" />
+              <Stack
+                sx={{
+                  width: "45%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={review}
+                  alt=""
+                  // className="Image-size2"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "45%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={review}
+                  alt=""
+                  // className="Image-size2"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "45%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={review}
+                  alt=""
+                  // className="Image-size2"
+                />
+              </Stack>
+              <Stack
+                sx={{
+                  width: "45%",
+                }}
+              >
+                <img
+                  width={"100%"}
+                  height={"100%"}
+                  src={review}
+                  alt=""
+                  // className="Image-size2"
+                />
+              </Stack>
             </Stack>
           </Stack>
         </Stack>
       </Stack>
     </Stack>
   );
-}
+};
 
-export default Awards
+export default Awards;
