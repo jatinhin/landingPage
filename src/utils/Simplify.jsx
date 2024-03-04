@@ -31,7 +31,7 @@ const Simplify = () => {
   };
   return (
     <Stack
-      height={{ xl: "120vh", xs: "none" }}
+      height={{ xl: "940px", xs: "none" }}
       // direction={"row"}
       sx={{
         flexDirection: {

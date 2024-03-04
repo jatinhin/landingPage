@@ -18,94 +18,71 @@ import ChairRoundedIcon from "@mui/icons-material/ChairRounded";
 import NotificationsOffRoundedIcon from "@mui/icons-material/NotificationsOffRounded";
 
 const ProductSlider = () => {
-  const features = [
-    {
-      icon: (
-        <ChairRoundedIcon
-          sx={{ fontSize: { xss: "20px", xs: "13px", lg: "30px" } }}
-        />
-      ),
-    },
-    {
-      icon: (
-        <WifiRoundedIcon
-          sx={{ fontSize: { xss: "20px", xs: "13px", lg: "30px" } }}
-        />
-      ),
-    },
-    {
-      icon: (
-        <NotificationsOffRoundedIcon
-          sx={{ fontSize: { xss: "20px", xs: "13px", lg: "30px" } }}
-        />
-      ),
-    },
-  ];
   const navigate = useNavigate();
   const [Cards, setCards] = useState([]);
   const handlecardClicks = (slug) => {
     navigate(`/podsdetails/${slug}`);
   };
- 
-   const lists2 = [
-     {
-       id: "1",
-       title: "GST compliance",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
 
-       bgcolor: "white",
-     },
-     {
-       id: "2",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+  const lists2 = [
+    {
+      id: "1",
+      title: "GST compliance",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
 
-       bgcolor: "#C2FFD3",
-     },
+      bgcolor: "white",
+    },
+    {
+      id: "2",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
 
-     {
-       id: "3",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
-     },
-     {
-       id: "4",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+      bgcolor: "#C2FFD3",
+    },
 
-       bgcolor: "#052973",
-     },
-     {
-       id: "5",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
-     },
-     {
-       id: "6",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+    {
+      id: "3",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+    },
+    {
+      id: "4",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
 
-       bgcolor: "#F15B25",
-     },
-     {
-       id: "7",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
-     },
-     {
-       id: "8",
-       title: "Sales Force Automation",
-       description:
-         "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
-     },
-   ];
+      bgcolor: "#052973",
+    },
+    {
+      id: "5",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+    },
+    {
+      id: "6",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+
+      bgcolor: "#F15B25",
+    },
+    {
+      id: "7",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+    },
+    {
+      id: "8",
+      title: "Sales Force Automation",
+      description:
+        "Automate routine sales, marketing, and support functions that take up valuable work time, giving you more time to concentrate on your customers. Create optimized workflows that help you reduce manual data entry, eliminate redundancies, and speed up your overall process.",
+    },
+  ];
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -125,7 +102,17 @@ const ProductSlider = () => {
       sx={{ width: { lg: "90%", xs: "93%" }, margin: "auto" }}
       display={{ xl: "none", xs: "flex" }}
     >
-      <Carousel responsive={responsive} arrows={false} className="hii">
+      <Carousel
+        autoPlay={true}
+        infinite={true}
+        responsive={responsive}
+        arrows={false}
+        className="hii"
+        style={{
+          display: "flex",
+          gap: "10px",
+        }}
+      >
         {lists2.map((d) => (
           <Stack
             className="content"
